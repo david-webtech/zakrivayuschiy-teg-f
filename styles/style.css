@@ -64,10 +64,11 @@
 
 .card__title {
   padding-left: 10px;
-  font-weight: var(--headings-font-weight);
+  font-weight: var(--headings-font-weight, 700);
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 170%;
   font-variation-settings: "wght" var(--font-variation-text);
+  letter-spacing: 0.29px;
 }
 
 .uppercase {
@@ -106,6 +107,8 @@
 
 .card__image-picture {
   inline-size: 100%;
+  width: 696px;
+  height: 696px;
 }
 
 .filter-hue-rotate {
@@ -138,6 +141,9 @@
 
 .card__wrapper {
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
 }
 
 .card__wrapper-description {
@@ -193,10 +199,10 @@
   left: 0;
   display: block;
   background-color: var(--black);
-  transition: transform .5s ease-in-out;
   transform: translateX(-100%);
   inline-size: 100%;
   block-size: 100%;
+  transition: transform .5s ease-in-out;
 }
 
 .button:hover::before {
@@ -211,14 +217,13 @@
   border: 2px solid var(--black);
   box-shadow: 2px 2px 0px 0px var(--black);
   outline: none;
-  transition: .3s;
 }
 
 .card__icon-button {
   border: 2px solid transparent;
   padding: 0;
   background-color: transparent;
-  transition: border-color ease .3s;
+
   cursor: pointer;
   inline-size: 42px;
 }
@@ -235,7 +240,6 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--black);
-  transition: ease .3s;
 }
 
 .button__memory {
